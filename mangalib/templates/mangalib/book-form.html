@@ -1,0 +1,11 @@
+{% include 'mangalib/include/begin_page.html'%}
+
+<h1>Gestion du livre</h1>
+
+<form method="post">
+    {% csrf_token %} 
+    {{ form.as_p}} 
+    <input type="submit" value="Ajouter">
+</form>
+
+{% include 'mangalib/include/end_page.html' %}

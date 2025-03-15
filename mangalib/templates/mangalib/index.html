@@ -1,0 +1,27 @@
+{% include 'mangalib/include/begin_page.html'%}
+
+
+<h1>Bienvenue sur Mangalib !</h1>
+<p><a href="{% url 'mangalib:add' %}">+ AJOUTER LIVRE</a></p>
+
+<table>
+    <tr>
+        <th>Nom</th>
+        <th>AUTEUR</th>
+        <th>QTE</th>
+        <th colspan="2">ACTIONS</th>
+    </tr>
+    {% for book in books %}
+
+    <tr>
+        <td><a href="{% url 'mangalib:show' book.id %}">{{ book.title }}</a></td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.quantity }}</td>
+        <td><a href="{% url 'mangalib:edit' book.id %}">/</a></td>
+        <td><a href="{% url 'mangalib:delete' book.id %}">X</a></td>
+    </tr>
+    {% endfor %}
+</table>
+<br>
+
+{% include 'mangalib/include/end_page.html' %}

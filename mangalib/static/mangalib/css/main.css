@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+   color: white;
+   text-align: center;
+}
+h1{
+    color: rgb(238, 88, 88);
+}
+a{
+    text-decoration:  none;
+    color: rgb(241, 72, 72);
+    font-size: 20px;
+}
+td,th{
+    border: solid 1px rgb(56, 55, 55);
+}

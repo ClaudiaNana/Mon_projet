@@ -1,0 +1,10 @@
+{% include 'mangalib/include/begin_page.html'%}
+
+    <h1 >{{ book.title }}</h1>
+   
+    <p> Quantité : {{ book.quantity}}</p>
+    <p> Auteur : {{ book.author.name }}</p>
+    <p><a href="{% url 'mangalib:index' %}">&laquo; Revenir à la liste des livres</a></p>
+
+
+    {% include 'mangalib/include/end_page.html' %}
